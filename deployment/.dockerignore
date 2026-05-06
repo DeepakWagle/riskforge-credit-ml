@@ -1,0 +1,9 @@
+data/
+notebooks/
+*.ipynb
+__pycache__/
+*.pkl
+*.joblib
+venv/
+.env
+.git/
