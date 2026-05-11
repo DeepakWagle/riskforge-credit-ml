@@ -1,7 +1,18 @@
 import joblib
 import pandas as pd
+import os
+import urllib.request
+import gdown
+MODEL_PATH = "models/bundle.joblib"
+MODEL_URL = "https://drive.google.com/uc?id=1SMmYFjUxnGidXhkgzDYEyFa7CR_M8DXG"
 
-bundle = joblib.load("models/bundle.joblib")
+os.makedirs("models", exist_ok=True)
+
+if not os.path.exists(MODEL_PATH):
+    print("Downloading model...")
+    gdown.download(MODEL_URL, MODEL_PATH, quit=False)
+
+bundle = joblib.load(MODEL_PATH)
 pipe = bundle["model"]
 
 
