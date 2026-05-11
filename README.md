@@ -194,8 +194,8 @@ Why LightGBM was selected:
 * strong performance on tabular financial data
 * faster inference compared to heavier ensemble models
 
-Final validation ROC-AUC:
-~0.778
+- ROC-AUC: ~0.778
+- PR-AUC: ~0.276
 
 ---
 
@@ -321,10 +321,10 @@ The deployment setup includes:
 * isolated deployment dependencies
 
 Docker build:
-docker build -t riskforge-api ./deployment
+docker build -t riskforge-api -f deployment/dockerfile .
 
 Docker run:
-docker run -p 8000:8000 riskforge-api
+docker run -p 6000:6000 riskforge-api
 
 ---
 
@@ -370,11 +370,13 @@ Potential future monitoring tools:
 
 Example API response:
 
+```json
 {
-"probability": 0.71,
-"risk_band": "High Risk",
-"decision": "Reject"
+  "probability": 0.71,
+  "risk_band": "High Risk",
+  "decision": "Reject"
 }
+```
 
 ---
 
