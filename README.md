@@ -276,7 +276,7 @@ Output includes:
 
 ## API Deployment
 
-A FastAPI application was built to expose the model as a real-time prediction service.
+FastAPI inference service deployed on Render.
 
 Features:
 
@@ -285,11 +285,28 @@ Features:
 * reusable inference pipeline
 * deployment-ready structure
 
-Local API execution:
-`uvicorn deployment.app:app --reload`
+Live API:
+https://riskforge-credit-ml.onrender.com/docs
 
-Swagger API docs:
-[http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
+### FastAPI Docs
+
+![FastAPI Docs](assets/fastapi_docs.png)
+
+---
+
+## ROC Curve
+
+Model discrimination performance on test data.
+
+![ROC Curve](assets/roc_curve.png)
+
+---
+
+## SHAP Explainability
+
+Top features influencing default risk prediction.
+
+![SHAP Summary](assets/shap_summary.png)
 
 ---
 
