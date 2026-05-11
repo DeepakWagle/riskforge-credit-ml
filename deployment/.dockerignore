@@ -1,9 +1,11 @@
 data/
 notebooks/
 *.ipynb
+.ipynb_checkpoints/
 __pycache__/
 *.pkl
 *.joblib
 venv/
+.venv/
 .env
 .git/
