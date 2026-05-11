@@ -1,4 +1,4 @@
-# RiskForge(Credit Default Risk Prediction)
+# RiskForge — Credit Default Risk Prediction System
 ## Overview
 
 This project is an end-to-end machine learning system built to predict the probability of loan default using structured financial data.
