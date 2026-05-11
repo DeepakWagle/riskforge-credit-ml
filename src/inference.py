@@ -9,8 +9,7 @@ MODEL_URL = "https://drive.google.com/uc?id=1SMmYFjUxnGidXhkgzDYEyFa7CR_M8DXG"
 os.makedirs("models", exist_ok=True)
 
 if not os.path.exists(MODEL_PATH):
-    print("Downloading model...")
-    gdown.download(MODEL_URL, MODEL_PATH, quit=False)
+    gdown.download(MODEL_URL, MODEL_PATH, quiet=False)
 
 bundle = joblib.load(MODEL_PATH)
 pipe = bundle["model"]
